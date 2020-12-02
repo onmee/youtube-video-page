@@ -3,44 +3,72 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="main.css">
         <title>YouTube</title>
 
     </head>
     <body>
-        <header>
+        <header class="navigation">
         <!-- Navigation bar with three sections, for 1.Triple bar,Youtube Logo; 2.Search Bar, 3.Account logos-->
-                <button style="width: 40px; height: 40px;">
-                    <img src="assets/yt-bar.svg">
+            <ul>
+                <li class="left-icons"><img src="assets/yt-bar.svg"></li>
+                <li class="left-icons" style="width: 80px; height: 24px;"><img style="padding-top: 3px" src="assets/yt-logo.svg"></li>
+            </ul>
+
+            <ul>
+            <li class="search-form">
+                <input class= "search-bar" type="text" placeholder="Search">
+                <button class= "search-btn">
+                    <img style="width: 19px;" src="assets/yt-search.svg">
                 </button>
-                <img id="logo" src="assets/yt-logo.svg">
-                <div id="search-form">
-                    <input type="text" href="#"></input>
-                    <button style="width: 40px; height: 40px;">
-                        <img src="assets/yt-search.svg">
-                    </button>
-                </div>
-                <button style="width: 40px; height: 40px;">
-                    <img src="assets/yt-create.svg">
-                </button>
-                <button style="width: 40px; height: 40px;">
-                    <img src="assets/yt-apps.svg">
-                </button>
-                <button style="width: 40px; height: 40px;">
-                    <img src="assets/yt-dots.svg">
-                </button>
+            </li>
+            </ul>
+
+            </ul>
+            <ul>
+                <li class="right-icons"><img src="assets/yt-create.svg"></li>
+                <li class="right-icons"><img src="assets/yt-apps.svg"></li>
+                <li class="right-icons"><img src="assets/yt-dots.svg"></li>
+            </ul>
         </header>
 
 
-        <main>
+        <main class="grid-container">
         <!-- Section with 1.Embedded Video Player, 2.Video info, 3.Blurb, 4.Comments  -->
+            <section class="video">
+                <div class="videoWrapper">
+                    <iframe width="800" height="450"src="https://www.youtube.com/embed/-FlxM_0S2lA" 
+                    frameborder="0" allowfullscreen></iframe> 
+                </div>
+                <div class="video-info" style="padding: 20px 0 8px; font-size: 14px;">
+                    <h1 class="title" style="margin: 0; font-size: 18px;">Lofi hip hop mix - Beats to Relax/Stufy to [2018]</h1>
+                    <div id="info-container" style="height: 40px; display: flex; flex-direction: row; align-items: center;">
+                         <span>43,500,000</span>
+                         <span style="margin-left: 10px;">19 Mar 2018</span>
+                         <div id="menu-container" style= "margin-left: auto;">
+                                <span>menu container</span>
+                         </div>   
+                    </div>
+                </div>
+                
+                <div class="video-meta">
 
+                </div>
+                
+            </section>
+
+            <section class="comment">
+                <p>Comments</p>
+            </section>
+
+            <section class="up-next">
+                <p>Up-next</p>
+            </section>
 
         </main>
-
         <!-- The section on the right with thumbnails of recommended videos-->
-        <aside>
-
-        </aside>
     </body>
 </html>
+
+<!-- https://jorgeamendoza.github.io/TheOdinProject_Projects/youtube_copy/index.html -->
