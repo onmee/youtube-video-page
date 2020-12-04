@@ -1,121 +1,164 @@
-html, body{
-    font-size: 10px;
-    font-family: 'Roboto', sans-serif;
-    /* To use full height of the page*/
-    height: 100%;
-    background-color: ;
-    }
 
-header {
-    background-color: palegoldenrod;
+/* || General Styles */
+
+html, body{
+	font-size: 14px;
+	font-family: 'Roboto', Arial, sans-serif;
+	/* To use full height of the page*/
+	height: 100%;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    }
-
-/* Fluid Width Video that maintains 16:9 aspect */
-.videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /*16:9*/
-    height: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-.videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
-.grid-container {
-    max-width: 1500px;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 0.4fr;
-    grid-template-rows: 1fr 0.6fr;
-    gap: 10px 10px;
-    grid-template-areas:
-      "video up-next"
-      "comment up-next";
-    }
-  
-.video { grid-area: video;
-         background-color: greenyellow;
-        }
+/* || Header and Main Navigation */
 
-.video-info {
-    background-color: brown;
-    height: 64px;
-}
-.video-meta {
-    background-color: burlywood;
-    min-height: 200px;
-    overflow: hidden;
-}
-
-.comment { grid-area: comment;
-           background-color: grey; }
-  
-.up-next { grid-area: up-next;
-           background-color: orange; }
-  
 .navigation {
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    font-size: 16px;
-    justify-content: space-between;
-    align-items: center;
-    }
-        
-
+	display: flex;
+	font-size: 16px;
+	justify-content: space-between;
+	align-items: center;
+}
+			
 .left-icons {
-    float: left;    
-    padding: 16px;
-    width: 24px;
-    height: 24px;
-    }
+	float: left;    
+	padding: 16px;
+	width: 24px;
+	height: 24px;
+}
 
+#logo {
+	width: 80px;
+	height: 24px;
+}
 
 .right-icons {
-    float: left;
-    display: block;
-    color:black;
-    padding: 16px;
-    width: 24px;
-    height: 24px;
-    }
+	float: left;
+	padding: 16px;
+	width: 24px;
+	height: 24px;
+}
 
 .search-form{
-    float: center;
-    display: inline-flex;
-    padding: 16px;
-    min-width: 300px;
-    width: 40vw;
-    height: 32px;
-    }
+	float: center;
+	display: inline-flex;
+	padding: 16px;
+	min-width: 300px;
+	width: 40vw;
+	height: 32px;
+}
 
 .search-bar {
-    border: 1px solid #ccc;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    min-width: 85%;
-    max-width: 85%;
+	border: 1px solid #ccc;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	min-width: 85%;
+	max-width: 85%;
 }
 
 .search-btn {
-    width: 65px;
-    height: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
+	width: 65px;
+	height: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+.search-btn img { width: 19px; }
+
+
+/* || Grid areas for video player, comments and recommended */
+
+.grid-container {
+	padding: 0px 16px;
+	max-width: 1920px;
+	margin: 10px auto;
+	display: grid;
+	grid-template-columns: 1fr 0.4fr;
+	grid-template-rows: 1fr 0.6fr;
+	gap: 10px 10px;
+	grid-template-areas:
+		"video up-next"
+		"comment up-next";
+}
+
+
+/* || Video information and metric styles */
+
+.video-info {
+	height: 64px;
+	padding: 20px 0 8px;
+	width: 100%;
+	height: 100%;
+}
+
+.video-title {
+	margin: 0;
+	font-size: 18px;
+}
+
+.metrics {
+	width: 100%;
+	height: 40px;
+	margin-top: 5px;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+#right-metrics {
+	display: inline-flex;
+	align-items: center;
+}
+
+#left-metrics > span:nth-child(2) { margin-left: 10px;}
+
+#right-metrics img { width: 24px; }
+
+#right-metrics span { padding: 0 15px 0 5px; }
+
+.video-blurb {
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	min-height: 200px;
+	overflow: hidden;
+}
+
+
+/* || Fluid Width Video that maintains 16:9 aspect */
+
+.video { grid-area: video; }
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /*16:9*/
+	height: 0;
+}
+			
+.videoWrapper iframe {
+	width: 800px;
+	height: 450px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
 
 
+/* || Comments section */
 
+.comment { grid-area: comment;
+					background-color: grey; }
+
+/* || Recommended section */
+
+.up-next { grid-area: up-next;
+					background-color: orange; }
