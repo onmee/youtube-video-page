@@ -86,10 +86,10 @@ ul {
 	display: grid;
 	grid-template-columns: 1fr 0.4fr;
 	grid-template-rows: 1fr 0.6fr;
-	gap: 10px 10px;
+	gap: 10px 25px;
 	grid-template-areas:
-		"video up-next"
-		"comment up-next";
+		"video recommended-videos"
+		"comment recommended-videos"
 }
 
 
@@ -274,5 +274,30 @@ ul {
 
 /* || Recommended section */
 
-.up-next { grid-area: up-next;
-					background-color: orange; }
+.recommended-videos { 
+	grid-area: recommended-videos;
+}
+
+.up-next {
+	box-sizing: border-box;
+	width: 402px;
+	height: 136px;
+	padding-bottom: 8px;
+	padding-top: 20px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+
+}
+
+.next-video {
+	display: flex; 
+	flex-direction: row;
+}
+
+.next-video-info {
+	margin-left: 10px; l
+	line-height: 1.4em;
+}
+
+.more.next-video { margin-bottom: 8px;}
