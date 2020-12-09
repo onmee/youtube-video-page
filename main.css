@@ -15,7 +15,6 @@ ul {
 }
 
 *:focus {
-    /*Chrome: Stop highlighting border outline of all elements*/
     outline: none;
 }
 
@@ -300,4 +299,25 @@ ul {
 	line-height: 1.4em;
 }
 
-.more.next-video { margin-bottom: 8px;}
+.more.next-video { margin-bottom: 8px; }
+
+
+/* || Move recommended videos when viewport width is less than 1000px*/
+
+@media screen and (max-width: 1000px) {
+	.grid-container {
+		padding: 0px 16px;
+		margin: 10px auto;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		gap: 10px;
+		grid-template-areas:
+    		"video"
+    		"recommended-videos"
+    		"comment";
+
+	}
+
+	.up-next { width: 100%;}
+}
